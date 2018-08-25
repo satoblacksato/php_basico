@@ -1,0 +1,26 @@
+{
+    "name": "code/poo",
+    "description": "info",
+    "require": {
+        "nesbot/carbon": "^1.22",
+        "vlucas/phpdotenv": "^2.4",
+        "cartalyst/collections": "^1.1",
+        "fzaninotto/faker": "^1.6",
+        "fpdo/fluentpdo": "^1.1",
+        "illuminate/database": "^5.6",
+        "illuminate/events": "^5.6",
+        "illuminate/pagination": "^5.6"
+    },
+    "authors": [
+        {
+            "name": "Test",
+            "email": "test@example.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "App\\":"src/"
+        },
+        "clasmap":["src/"]
+    }
+}
