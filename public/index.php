@@ -8,6 +8,7 @@
 require '../vendor/autoload.php';
 
 require '../config/database.php';
+require '../helpers/helper.php';
 
 use App\Models\Comentario;
 /*
@@ -104,4 +105,11 @@ foreach (Comentario::
 }
 echo date('Y-m-d H:i:s.u');*/
 
-include('../views/table_users.php');
+
+
+
+$controller= evaluaController('controller', $_REQUEST);
+$method= getMethod('method', $_REQUEST);
+
+$objController = new $controller;
+$objController->$method();
