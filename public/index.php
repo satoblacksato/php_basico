@@ -28,7 +28,7 @@ $objComentario->save();*/
 $objFaker=Faker\Factory::create('es_ES');
 $arrayData=[];
 
-for($idx=0;$idx<rand(3,20);$idx++){
+for($idx=0;$idx<5000;$idx++){
 	(
 		new App\Models\Comentario(
 			['name'=>$objFaker->firstName,
@@ -39,7 +39,6 @@ for($idx=0;$idx<rand(3,20);$idx++){
 	)->save();
 }
 */
-
 
 /*
 $objComentario=App\Models\Comentario::findOrFail(1);
@@ -76,4 +75,33 @@ var_dump($var);*/
 Comentario::where('tipo_id','=',2)
 ->update(['name'=>'actualizado']);*/
 
-Comentario::where('tipo_id','=',2)->delete();
+//Comentario::where('tipo_id','=',2)->delete();
+//
+
+/*
+echo date('Y-m-d H:i:s.u');
+foreach (Comentario::get()
+	as $item) {
+	echo "<p>{$item->name} es de tipo {$item->tipo->name}</p>";
+}
+echo date('Y-m-d H:i:s.u');
+
+echo date('Y-m-d H:i:s.u');
+foreach (Comentario::with('tipo')->get()
+	as $item) {
+	echo "<p>{$item->name} es de tipo {$item->tipo->name}</p>";
+}
+echo date('Y-m-d H:i:s.u');
+*/
+
+/*
+echo date('Y-m-d H:i:s.u');
+foreach (Comentario::
+	join('tipos as t','t.id','=','comentarios.tipo_id')
+	->get()
+	as $item) {
+	echo "<p>{$item->name} es de tipo {$item->tipo->name}</p>";
+}
+echo date('Y-m-d H:i:s.u');*/
+
+include('../views/table_users.php');

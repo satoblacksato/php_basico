@@ -10,6 +10,7 @@ class ComposerStaticInit8eb54e576ea18d44e8a7d7525f21b10f
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '2610a18e262a9328d59872ebc8f6b5db' => __DIR__ . '/..' . '/fpdo/fluentpdo/FluentPDO/FluentPDO.php',
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -34,6 +35,7 @@ class ComposerStaticInit8eb54e576ea18d44e8a7d7525f21b10f
         ),
         'F' => 
         array (
+            'FastRoute\\' => 10,
             'Faker\\' => 6,
         ),
         'D' => 
@@ -92,6 +94,10 @@ class ComposerStaticInit8eb54e576ea18d44e8a7d7525f21b10f
         'Illuminate\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
         'Faker\\' => 
         array (

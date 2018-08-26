@@ -11,4 +11,11 @@ class Comentario extends Model{
 	protected $fillable=['name','description','tipo_id'];
 
 	//const CREATED_AT = 'fecha_crea';
+	//
+	
+	public function tipo(){
+		return $this->belongsTo(Tipo::class,'tipo_id');
+	}
+
+
 }
