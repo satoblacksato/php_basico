@@ -19,36 +19,22 @@
 	<div class="row">
 		<div class="col-md-4">
 			<form role="form">
-				<div class="form-group">
-					 
-					<label for="exampleInputEmail1">
-						Email address
+				<div class="form-group"> 
+					<label for="titulo">
+						Título
 					</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" />
+					<input type="text" class="form-control" id="titulo" />
 				</div>
-				<div class="form-group">
-					 
-					<label for="exampleInputPassword1">
-						Password
+				<div class="form-group"> 
+					<label for="descripcion">
+						Descripcion
 					</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" />
+					<textarea class="form-control"
+						 id="descripcion" >
+					</textarea>/>
 				</div>
-				<div class="form-group">
-					 
-					<label for="exampleInputFile">
-						File input
-					</label>
-					<input type="file" class="form-control-file" id="exampleInputFile" />
-					<p class="help-block">
-						Example block-level help text here.
-					</p>
-				</div>
-				<div class="checkbox">
-					 
-					<label>
-						<input type="checkbox" /> Check me out
-					</label>
-				</div> 
+				
+				
 				<button type="submit" class="btn btn-primary">
 					Submit
 				</button>
