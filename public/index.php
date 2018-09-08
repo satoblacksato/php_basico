@@ -111,5 +111,9 @@ echo date('Y-m-d H:i:s.u');*/
 $controller= evaluaController('controller', $_REQUEST);
 $method= getMethod('method', $_REQUEST);
 
-$objController = new $controller;
-$objController->$method();
+try {
+    $objController = new $controller;
+    $objController->$method();
+}catch (\Exception $ex){
+    echo "errrrror";
+}

@@ -22,6 +22,18 @@ class ComentarioController{
 		header('Location: ?controller=ComentarioController&method=index');
 	}
 
+	public function save_ajax(){
+        $objComentario=new Comentario(
+            setFillCustom(
+                ['name','description','tipo_id'],$_POST
+            )
+        );
+        $objComentario->save();
+        header('Content-type: application/json; charset=utf-8');
+        echo json_encode(Comentario::with('tipo')->where('tipo_id','=',$_POST['tipo_id'])->get());
+        exit();
+		}
+
 	public function destroy(){
 		$objComentario=Comentario::findOrFail(getVar('id',$_POST));
 		$objComentario->delete();
